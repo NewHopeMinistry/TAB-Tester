@@ -16,10 +16,10 @@ const urlsToCache = [
     `html/about.html?version=${version}`,
     `html/help.html?version=${version}`,
     `html/history.html?version=${version}`,
+    `html/images/icons/homelogo-512.png?version=${version}`,
     `html/license.html?version=${version}`,
     `html/statement.html?version=${version}`,
-    `html/twfabout.html?version=${version}`,
-    `html/images/icons/homelogo-512.png?version=${version}`,
+    `html/twfabout.html?version=${version}`
 ];
 
 self.addEventListener('install', event => {
