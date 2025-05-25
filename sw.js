@@ -1,5 +1,5 @@
 var update = true;
-const version = '1.9';
+const version = '1.2';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
 
 const urlsToCache = [
@@ -19,7 +19,7 @@ const urlsToCache = [
     `html/license.html?version=${version}`,
     `html/statement.html?version=${version}`,
     `html/twfabout.html?version=${version}`,
-    `html/images/icons/clear-yellow-logo1-512.png?version=${version}`,
+    `html/images/icons/homelogo-512.png?version=${version}`,
 ];
 
 self.addEventListener('install', event => {
@@ -63,21 +63,27 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         (async () => {
 
-            var url = new URL(event.request.url);
+            const cache = await caches.open(CACHE_NAME);
+            var url= new URL(event.request.url);
             var filename = url.pathname.split('/').pop();
 
+            url.search = '';
             if (event.request.mode === 'navigate') {
-                if (url.pathname === '/' || !filename || filename === '')
-                { url.search = ''; url = `${url}index.html?version=${version}` };
-                if (filename === 'index.html') { url.search = ''; url = `${url}?version=${version}` };
-            };
-            if (!filename.endsWith('.json') || filename === 'manifest.json') { url.search = ''; url = `${url}?version=${version}` };
 
-            const cache = await caches.open(CACHE_NAME);
+                if (url.pathname === '/' || !filename || filename === '')
+                    { url.search = ''; url = `${url}index.html?version=${version}`; testFile = false; };
+
+                if (filename === 'index.html') { url.search = ''; url = `${url}?version=${version}`; };
+            };
+            if (!filename.endsWith('.json') || filename === 'manifest.json')
+                { if ( filename !== 'index.html') { url.search = ''; url = `${url}?version=${version}`; }; };
+
+
             if (filename === 'TWFVerses.json') {
                 if (update) {
                     const TWFresponse = await fetchOnline(url, filename);
                     if (TWFresponse.ok) {
+                        url.search = '';
                         await cache.delete(url);
                         await cache.put(url, TWFresponse.clone());
                         update = false;
@@ -91,6 +97,7 @@ self.addEventListener('fetch', event => {
             const response = await fetchOnline(url, filename);
             if (!response.ok) { return response; };
             await cache.put(url, response.clone());
+            await cache.delete('/index.html');
             return response;
 
         })()
