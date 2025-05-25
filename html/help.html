@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<base href="./">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icons/favicon-16.png">
+    <title>The Ark Bible Help</title>
+    <script async src="js/htmlvariables.js"></script>
+    <link async rel="stylesheet" type="text/css" href="css/html.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById('id-lastEdited').textContent = `Last Edited On: ${dateEdited}`;
+            }, 200);
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="cs-page">
+
+        <h2>The Ark Bible Help</h2>
+        <a href="../index.html">
+            <img async src="images/icons/clear-yellow-logo1-512.png" class="cs-iconLink" title="Home - The Ark Bible" alt="Home - The Ark Bible Icon">
+        </a>
+
+        <p>
+            The Ark Bible is an open-source Bible application project, that can be freely distributed by anyone and to anyone for use in spreading God's Holy word.
+        </p>
+        <br><br>
+        <hr>
+
+        <br><br>
+        <hr>
+        <p>
+            1. Local Storage - If you decide to let The Ark Bible store files locally, all the support files for the application will be stored locally in your browser cache. All the version files will also be stored locally as you change Bible versions. The first time you use a Bible version listed in the Versions menu it will require an internet connection, but once you have accessed that version for the first time, it will also be stored locally. Once saved all the html, css, and javascript files required by the app will be stored and any versions accessed with an active internet connection will be available offline for future use without an internet connection. After being saved locally the app will not require an internet connection, and it will operate much more efficiently.If you decide not to allow files to be stored locally, the app will require an internet connection every time you run it.
+        </p>
+
+        <br><br>
+        <hr>
+        <p>
+            2. The Red Letter - Black Letter function is currently only available for the partially edited chapters in the Twenty-Fist Century Version of the Bible. Other chapters and versions will eventually be able to use this functionality also, but not today. The Red Letter - Black Letter button is not visible for this functionality for the other versions, so the disappearing funcitionality buttons are not an error.
+        </p>
+
+        <br><br>
+        <hr>
+        <p>
+            3. The Paragraph Layout - Line Layout function is currently only available for the partially edited chapters in the Twenty-Fist Century Version of the Bible. Other versions will be able to eventually use this functionality also, but not today. The Paragraph Layout - Line Layout button is not visible for this functionality for the other versions, so the disappearing funcitionality buttons are not an error.
+        </p>
+
+        <br><br>
+        <hr>
+        <p>
+            4. The Reset Defaults button resets the settings in the app back to the default settings. It also deletes any data stored on your device, and the next time you run the app it will ask you if you want to allow data to be stored locally. If you click cancel, nothing will be stored on your device. If you change your mind later and want to have access to the app offline, just click the Reset Defaults button, and restart you browser. If you have an internet connection you can choose to have the files stored on your device or not.
+        </p>
+
+        <hr>
+        <br><br>
+        <div class="cs-GodLovesYou cs-GodLovesYouPages">
+            <div>God loves you, Jesus loves you, I love you, and this is God's free gift for you!</div>
+            <div>The TWF version is being actively edited and is subject to change daily.</div>
+            <div>If you prefer to read older Bible versions, please feel free to do so.</div><br>
+            <a href="../html/license.html">Copyright ©2024 New Hope Ministries <span class="cs-copySign">●</span> MIT License <span class="cs-copySign">●</span> Public Domain</a>
+            <br><br>
+            <div id="id-lastEdited">Last Edited:</div>
+        </div>
+    </div>
+
+    <p id="height" style="position: relative; left: 5%;"></p>
+    <p id="width" style="position: relative; left: 5%;"></p>
+    <script>
+        document.getElementById("height").textContent = `Height: ${screen.height}`;
+        document.getElementById("width").textContent = `Width: ${screen.width}`;
+    </script>
+</body>
+
+</html>
+
+
+
