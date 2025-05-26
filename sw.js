@@ -1,7 +1,9 @@
 var update = true;
+var updateVar = true;
 const version = '1.2';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
 
+// `html/js/htmlvariables.js?version=${version}`,
 const urlsToCache = [
     `index.html?version=${version}`,
     `manifest.json?version=${version}`,
@@ -12,7 +14,6 @@ const urlsToCache = [
     `js/lateload.js?version=${version}`,
     `js/searcher.js?version=${version}`,
     `html/css/html.css?version=${version}`,
-    `html/js/htmlvariables.js?version=${version}`,
     `html/about.html?version=${version}`,
     `html/help.html?version=${version}`,
     `html/history.html?version=${version}`,
@@ -78,14 +79,29 @@ self.addEventListener('fetch', event => {
             if (!filename.endsWith('.json') || filename === 'manifest.json')
                 { if ( filename !== 'index.html') { url.search = ''; url = `${url}?version=${version}`; }; };
 
+// This can be removed after editing TWF is finished
+            if (filename === 'htmlvariables.js') {
 
-            if (filename === 'TWFVerses.json') {
-                if (update) {
-                    const TWFresponse = await fetchOnline(url, filename);
-                    if (TWFresponse.ok) {
+                if (updateVar) {
+                    const res = await fetchOnline(url, filename);
+                    if (res.ok) {
                         url.search = '';
                         await cache.delete(url);
-                        await cache.put(url, TWFresponse.clone());
+                        await cache.put(url, res.clone());
+                        updateVar = false;
+                    };
+                };
+            };
+// End This can be removed after editing TWF is finished
+
+            if (filename === 'TWFVerses.json') {
+
+                if (update) {
+                    const res = await fetchOnline(url, filename);
+                    if (res.ok) {
+                        url.search = '';
+                        await cache.delete(url);
+                        await cache.put(url, res.clone());
                         update = false;
                     };
                 };
