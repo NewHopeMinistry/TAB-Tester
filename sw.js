@@ -71,8 +71,8 @@ self.addEventListener('fetch', event => {
             url.search = '';
             if (event.request.mode === 'navigate') {
 
-                if (url.pathname === '/' || !filename || filename === '')
-                    { url.search = ''; url = `${url}index.html?version=${version}`; testFile = false; };
+                if (url.pathname === '/' || url.pathname === '/TAB-Tester' || !filename || filename === '')
+                    { url.search = ''; url = `${url}index.html?version=${version}`; };
 
                 if (filename === 'index.html') { url.search = ''; url = `${url}?version=${version}`; };
             };
@@ -92,7 +92,6 @@ self.addEventListener('fetch', event => {
                     };
                 };
             };
-// End This can be removed after editing TWF is finished
 
             if (filename === 'TWFVerses.json') {
 
@@ -106,6 +105,7 @@ self.addEventListener('fetch', event => {
                     };
                 };
             };
+// End This can be removed after editing TWF is finished
 
             const cachedResponse = await cache.match(url);
             if (cachedResponse) { return cachedResponse };
