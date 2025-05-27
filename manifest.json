@@ -24,7 +24,7 @@
             "sizes": "128x128", "type": "image/png", "rel": "shortcut icon"
         },
         {
-            "src": "/images/icons/logo-256.png",
+            "src": "/TAB-Tester/images/icons/logo-256.png",
             "sizes": "256x256", "type": "image/png", "rel": "shortcut icon"
         },
         {
