@@ -1,4 +1,4 @@
-const version = '1.5';
+const version = '1.6';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
 var update = true;
 var updateVar = true;
@@ -66,10 +66,14 @@ self.addEventListener('fetch', event => {
 
             const cache = await caches.open(CACHE_NAME);
             var url= new URL(event.request.url);
+
             var filename = url.pathname.split('/').pop();
 
             url.search = '';
             if (event.request.mode === 'navigate') {
+
+                if (url.pathname === '/TAB-Tester/' && filename === '' )
+                    { url.href = `${url.origin}/TAB-Tester/index.html?version=${version}`; };
 
                 if (url.pathname === '/' || !filename || filename === '')
                     { url.search = `?version=${version}`; };
