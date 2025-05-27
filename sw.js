@@ -1,7 +1,7 @@
-var update = true;
-var updateVar = true;
 const version = '1.2';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
+var update = true;
+var updateVar = true;
 
 // `html/js/htmlvariables.js?version=${version}`,
 const urlsToCache = [
