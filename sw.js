@@ -71,7 +71,7 @@ self.addEventListener('fetch', event => {
             url.search = '';
             if (event.request.mode === 'navigate') {
 
-                if (url.pathname === '/' || url.pathname === '/TAB-Tester' || !filename || filename === '')
+                if (url.pathname === '/' || !filename || filename === '')
                     { url.search = ''; url = `${url}index.html?version=${version}`; };
 
                 if (filename === 'index.html') { url.search = ''; url = `${url}?version=${version}`; };
