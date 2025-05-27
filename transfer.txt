@@ -1,0 +1,11 @@
+If any functional code is changed
+---------------------------------
+First process TWFVerses.json i TAB
+Make copy of TAB Tester
+Rename TAB to TAB Backup
+Rename TABTester Copy to TAB
+Transfer TWFVerses.json - from TAB Backup to TAB
+Delete .git   .gitattributes  .gitignore - from TAB
+Transfer .git   .gitattributes  .gitignore - from TAB Backup to TAB
+edit twfabout.html - in TAB
+edit dateEdited in htmlvariables.js - in TAB
