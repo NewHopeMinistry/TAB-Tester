@@ -1,4 +1,4 @@
-const version = '1.4';
+const version = '1.5';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
 var update = true;
 var updateVar = true;
@@ -72,12 +72,12 @@ self.addEventListener('fetch', event => {
             if (event.request.mode === 'navigate') {
 
                 if (url.pathname === '/' || !filename || filename === '')
-                    { url.search = ''; url = `${url}index.html?version=${version}`; };
+                    { url.search = `?version=${version}`; };
 
-                if (filename === 'index.html') { url.search = ''; url = `${url}?version=${version}`; };
+                if (filename === 'index.html') { url.search = `?version=${version}`; };
             };
             if (!filename.endsWith('.json') || filename === 'manifest.json')
-                { if ( filename !== 'index.html') { url.search = ''; url = `${url}?version=${version}`; }; };
+                { if ( filename !== 'index.html') { url.search = `?version=${version}`; }; };
 
 // This can be removed after editing TWF is finished
             if (filename === 'htmlvariables.js') {
