@@ -1,11 +1,11 @@
-const version = '1.7';
+const version = '1.9';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
 var update = true;
 var updateVar = true;
 
 // `html/js/htmlvariables.js?version=${version}`,
+// `index.html?version=${version}`,
 const urlsToCache = [
-    `index.html?version=${version}`,
     `manifest.json?version=${version}`,
     `css/index.css?version=${version}`,
     `css/lateload.css?version=${version}`,
@@ -80,8 +80,10 @@ self.addEventListener('fetch', event => {
 
                 if (filename === 'index.html') { url.search = `?version=${version}`; };
             };
+            //if (!filename.endsWith('.json') || filename === 'manifest.json')
+                //{ if ( filename !== 'index.html') { url.search = `?version=${version}`; }; };
             if (!filename.endsWith('.json') || filename === 'manifest.json')
-                { if ( filename !== 'index.html') { url.search = `?version=${version}`; }; };
+                { url.search = `?version=${version}`; };
 
 // This can be removed after editing TWF is finished
             if (filename === 'htmlvariables.js') {
@@ -117,8 +119,8 @@ self.addEventListener('fetch', event => {
             const response = await fetchOnline(url, filename);
             if (!response.ok) { return response; };
             await cache.put(url, response.clone());
-            await cache.delete('/index.html');
-            await cache.delete('/TAB-Tester/?version=1.6');
+            //await cache.delete('/index.html');
+            //await cache.delete(`/TAB-Tester/?version=${version}`);
 
             return response;
 
