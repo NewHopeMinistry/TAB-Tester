@@ -9,12 +9,12 @@ window.addEventListener("load", async () => {
     if (rec) { rec = false; rec = loadChapters(); };
     if (rec) { rec = false; rec = changeVersion(); allLoaded = true; };
 
-    if (rec && allLoaded && htmvarloaded) {
+    if (rec && allLoaded) {
         setTimeout(() => {
             document.getElementById("id-loader").style.display = 'none';
             document.getElementById("id-randomChapter").style.display = 'block';
             document.getElementById('id-TWFspan').textContent = TWFmsg;
-            document.getElementById('id-TWFedited').textContent = `Last Edited: ${dateEdited}`;
+            if (dateEdited) { document.getElementById('id-TWFedited').textContent = `Last Edited: ${dateEdited}`; };
         }, 130);
     };
     if (rec) {
@@ -356,13 +356,7 @@ async function changeVersion() {
     let url = `data/${versions[idx].ar}/${versions[idx].ar}Verses.json`;
 
 // This can be removed after editing TWF is finished
-    if (versions[idx].ar === 'TWF') {
-        if (htmvarloaded){
-            url = `${url}?dte=${dateEdited}`;
-        } else {
-            url = `${url}?dte=nodate`;
-        };
-    };
+    if (versions[idx].ar === 'TWF') { if(dateEdited) { url = `${url}?dte=${dateEdited}`; }; };
 // End This can be removed after editing TWF is finished
 
     try {
