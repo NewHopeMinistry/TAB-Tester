@@ -1,4 +1,4 @@
-const version = '1.9';
+const version = '1.10';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
 var update = true;
 var updateVar = true;
@@ -123,9 +123,7 @@ self.addEventListener('fetch', event => {
             await cache.put(url, response.clone());
             //await cache.delete('/index.html');
             //await cache.delete(`/TAB-Tester/?version=${version}`);
-
             return response;
-
         })()
     );
 });
