@@ -86,28 +86,30 @@ self.addEventListener('fetch', event => {
                 { url.search = `?version=${version}`; };
 
 // This can be removed after editing TWF is finished
+        if (navigator.onLine) {
             if (filename === 'htmlvariables.js') {
 
-                if (updateVar) {
-                    const res = await fetchOnline(url, filename);
-                    if (res.ok) {
-                        url.search = '';
-                        await cache.delete(url);
-                        await cache.put(url, res.clone());
-                        updateVar = false;
+                    if (updateVar) {
+                        const res = await fetchOnline(url, filename);
+                        if (res.ok) {
+                            url.search = '';
+                            await cache.delete(url);
+                            await cache.put(url, res.clone());
+                            updateVar = false;
+                        };
                     };
                 };
-            };
 
-            if (filename === 'TWFVerses.json') {
+                if (filename === 'TWFVerses.json') {
 
-                if (update) {
-                    const res = await fetchOnline(url, filename);
-                    if (res.ok) {
-                        url.search = '';
-                        await cache.delete(url);
-                        await cache.put(url, res.clone());
-                        update = false;
+                    if (update) {
+                        const res = await fetchOnline(url, filename);
+                        if (res.ok) {
+                            url.search = '';
+                            await cache.delete(url);
+                            await cache.put(url, res.clone());
+                            update = false;
+                        };
                     };
                 };
             };
