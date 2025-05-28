@@ -1,4 +1,4 @@
-const version = '1.10';
+const version = '1.0';
 const CACHE_NAME = `ARK-cache-version: ${version}`;
 var update = true;
 var updateVar = true;
@@ -66,7 +66,6 @@ self.addEventListener('fetch', event => {
 
             const cache = await caches.open(CACHE_NAME);
             var url= new URL(event.request.url);
-
             var filename = url.pathname.split('/').pop();
 
             url.search = '';
@@ -88,7 +87,6 @@ self.addEventListener('fetch', event => {
 // This can be removed after editing TWF is finished
         if (navigator.onLine) {
             if (filename === 'htmlvariables.js') {
-
                     if (updateVar) {
                         const res = await fetchOnline(url, filename);
                         if (res.ok) {
@@ -99,9 +97,7 @@ self.addEventListener('fetch', event => {
                         };
                     };
                 };
-
                 if (filename === 'TWFVerses.json') {
-
                     if (update) {
                         const res = await fetchOnline(url, filename);
                         if (res.ok) {
