@@ -9,7 +9,7 @@ window.addEventListener("load", async () => {
     if (rec) { rec = false; rec = loadChapters(); };
     if (rec) { rec = false; rec = changeVersion(); allLoaded = true; };
 
-    if (rec && allLoaded) {
+    if (rec && allLoaded && htmvarloaded) {
         setTimeout(() => {
             document.getElementById("id-loader").style.display = 'none';
             document.getElementById("id-randomChapter").style.display = 'block';
@@ -356,7 +356,13 @@ async function changeVersion() {
     let url = `data/${versions[idx].ar}/${versions[idx].ar}Verses.json`;
 
 // This can be removed after editing TWF is finished
-    if (versions[idx].ar === 'TWF') { url = `${url}?dte=${dateEdited}`; };
+    if (versions[idx].ar === 'TWF') {
+        if (htmvarloaded){
+            url = `${url}?dte=${dateEdited}`;
+        } else {
+            url = `${url}?dte=nodate`;
+        };
+    };
 // End This can be removed after editing TWF is finished
 
     try {
