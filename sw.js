@@ -92,7 +92,6 @@ self.addEventListener('fetch', event => {
 // This can be removed after editing TWF is finished
         if (navigator.onLine) {
 
-            const socket = new WebSocket(url);
             if (filename === 'htmlvariables.js') {
                 if (updateVar) {
                     const headResponse = await fetch(url, { method: 'HEAD' });
