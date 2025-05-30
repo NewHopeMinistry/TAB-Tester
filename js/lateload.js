@@ -267,7 +267,7 @@ function resetData() {
     localStorage.removeItem('savedLocal');
     document.getElementById('top').scrollIntoView({ block: 'start' });
     unregisterServiceWorkers();
-    alert('Changes to your default data storage settings will take effect immediately, you will have to restart the browser with an active internet connection to use The Ark Bible!');
+    alert('Changes to your default data storage settings will take effect immediately. When you restart the browser you must have an active internet connection to use The Ark Bible!');
 };
 
 function resetDefaults() {

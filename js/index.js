@@ -355,10 +355,6 @@ async function changeVersion() {
     let idx = Number(aVersion.dataset.index);
     let url = `data/${versions[idx].ar}/${versions[idx].ar}Verses.json`;
 
-// This can be removed after editing TWF is finished
-    if (versions[idx].ar === 'TWF') { if(dateEdited) { url = `${url}?dte=${dateEdited}`; }; };
-// End This can be removed after editing TWF is finished
-
     try {
         const res = await fetch(url);
         if (!res.ok) { throw new Error(res.status); };
