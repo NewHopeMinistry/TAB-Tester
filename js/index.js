@@ -183,7 +183,7 @@ async function LoadBooks() {
 
     spa.style.display = "inline-block";
     spa.style.position = "relative";
-    spa.style.left = "27%";
+    spa.style.left = "24%";
     spa.style.transform = "transform: translate(-50%)";
     spa.style.padding = ".23em";
     spa.style.fontSize = ".56em";
