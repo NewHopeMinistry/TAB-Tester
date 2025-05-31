@@ -264,10 +264,12 @@ async function unregisterServiceWorkers() {
 
 function deleteData() {
 
+    let confirmed = confirm('Changes to your default data storage settings will take effect immediately. When you restart the browser you must have an active internet connection to use The Ark Bible, click OK to continue or Cancel to abort!');
+    if (!confirmed) { return; };
+
     localStorage.removeItem('savedLocal');
     document.getElementById('top').scrollIntoView({ block: 'start' });
     unregisterServiceWorkers();
-    alert('Changes to your default data storage settings will take effect immediately. When you restart the browser you must have an active internet connection to use The Ark Bible!');
 };
 
 function resetDefaults() {
