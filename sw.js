@@ -1,9 +1,10 @@
-const version = 14;
+const version = 15;
 var oldVersion = version - 1;
+// Change scope in index.html
 
 const MAIN_CACHE = `ARK-cache-version: ${version}`;
 const OLD_MAIN_CACHE = `ARK-cache-version: ${oldVersion}`;
-const VERSION_CACHE = 'ARK-bible-versions';
+const VERSION_CACHE = 'ARK-bibles';
 var update = true;
 var updateVar = true;
 
@@ -12,6 +13,7 @@ const urlsToCache = [
     'manifest.json',
     'css/index.css',
     'css/lateload.css',
+    'images/icons/favicon-16.png',
     'js/variables.js',
     'js/index.js',
     'js/lateload.js',
@@ -21,7 +23,7 @@ const urlsToCache = [
     'html/about.html',
     'html/help.html',
     'html/history.html',
-    'html/images/icons/clear-yellow-logo1-512.png',
+    'html/images/icons/homelogo-512.png',
     'html/license.html',
     'html/statement.html',
     'html/twfabout.html'

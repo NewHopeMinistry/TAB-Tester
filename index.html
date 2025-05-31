@@ -10,7 +10,8 @@
     <title>The Ark Bible</title>
     <link async rel="stylesheet" type="text/css" href="css/index.css">
     <link defer rel="stylesheet" type="text/css" href="css/lateload.css">
-    <!--<link rel="manifest" href="manifest.json">-->
+    <!--<link rel="manifest" href="manifest.json"> ! delete when testing the serviceworker-->
+    <link rel="manifest" href="manifest.json">
 
     <script src="html/js/htmlvariables.js"></script>
     <script async src="js/variables.js"></script>
@@ -165,7 +166,7 @@
 
                 <div id="id-paragraphLayout" class="cs-paragraphLayout" onclick="paragraphLayout()" title="Set format of text layout - Paragraph or Single Line">Paragraph Layout</div>
 
-                <div id="id-resetData" class="cs-resetData" onclick="resetData()" title="Reset Local Data Storage">Reset Local Data</div>
+                <div id="id-resetData" class="cs-resetData" onclick="deleteData()" title="Reset Local Data Storage">Delete Local Data</div>
 
                 <div id="id-resetDefaults" class="cs-resetDefaults" onclick="resetDefaults()" title="Reset Defaults to Original">Reset Defaults</div>
 
@@ -191,7 +192,7 @@
     <div id="id-end" class="cs-end">
         <br>
         <p id="id-endLine" class="cs-endLine">
-            By clicking OK, you agree to allow the app to use local storage to store Bible verse files locally to improve performance. The Ark Bible app does not collect or store any personal or tracking data. If you click Cancel no data will be saved locally. If you change your mind later, this can all be reset by clicking the Reset Local Data button at the bottom of the page, and restarting the browser with a working internet connection. More information about the files and data saved can be found if you click on the help link at the bottom of the page.
+            By clicking OK, you agree to allow The Ark Bible app to use local storage to store Bible verse files locally to improve performance. The Ark Bible app does not collect or store any personal or tracking data. If you click Cancel no data will be saved locally. If you change your mind later, this can all be reset by clicking the Delete Local Data button at the bottom of the page, and restarting the browser with a working internet connection, and this will delete all locally stored data. More information about the files and data saved can be found if you click on the help link at the bottom of the page.
         </p>
         <br>
         <div class="cs-endBtnLine">

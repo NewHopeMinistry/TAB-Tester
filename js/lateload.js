@@ -262,7 +262,7 @@ async function unregisterServiceWorkers() {
     };
 };
 
-function resetData() {
+function deleteData() {
 
     localStorage.removeItem('savedLocal');
     document.getElementById('top').scrollIntoView({ block: 'start' });
