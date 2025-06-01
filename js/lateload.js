@@ -213,7 +213,7 @@ function changeTheme() {
 function changeFontSize(direction) {
 
     if (direction === '+') {
-        if (activeFontSizeCount > 3) { return; };
+        if (activeFontSizeCount > 8) { return; };
         activeFontSize = activeFontSize * 1.15;
         activeFontSizeCount++;
     } else if (direction === '-') {
@@ -274,6 +274,9 @@ function deleteData() {
 
 function resetDefaults() {
 
+    let confirmed = confirm('Changes to The Ark Bible settings will take effect immediately! All settings will be reset to their default values, click OK to continue or Cancel to abort!');
+    if (!confirmed) { return; };
+
     const svg = document.getElementById('id-svg');
     const svg1 = document.getElementById('id-svgRotate');
     svg.style.visibility = 'hidden';
@@ -299,7 +302,7 @@ function resetDefaults() {
     activeChapterID = defaultChapterID;
     changeVersion();
     document.getElementById('top').scrollIntoView({ block: 'start' });
-    alert('Changes to your default settings will take effect immediately!');
+
 };
 
 function readRandomChapter() {
