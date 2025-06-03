@@ -350,16 +350,9 @@ function locateMenus(box) {
 
     // Select the divs
     const firstDiv = document.getElementById("id-header1");
-    const borderWidth = parseInt(getComputedStyle(firstDiv).borderTopWidth);
     const secondDiv = document.getElementById(box);
-
-    // Get the bottom position of the first div
-    //const firstDivBottom = firstDiv.offsetTop + firstDiv.offsetHeight - (2 * borderWidth);
     const contentHeight = firstDiv.clientHeight;
     const firstDivBottom = firstDiv.offsetTop + contentHeight;
-    
-    // Set the top position of the second div to match
-    //secondDiv.style.position = "absolute"; // Ensure the second div is positioned
     secondDiv.style.top = `${firstDivBottom}px`;
 
 };
