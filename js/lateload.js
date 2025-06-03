@@ -346,23 +346,5 @@ function paragraphLayout() {
     localStorage.setItem("paragraphLayout", paragraphLayoutDefault);
 };
 
-function locateMenus(box) {
-
-    // Select the divs
-    const firstDiv = document.getElementById("id-header1");
-    const secondDiv = document.getElementById(box);
-    const contentHeight = firstDiv.clientHeight;
-    const firstDivBottom = firstDiv.offsetTop + contentHeight;
-    secondDiv.style.top = `${firstDivBottom}px`;
-
-};
-
-
-function adjustPosition() {
-    locateMenus('id-versions');
-    locateMenus('id-books');
-    locateMenus('id-chapters');
-    locateMenus('id-verses');
-};
 
 

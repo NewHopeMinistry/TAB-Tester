@@ -1,5 +1,3 @@
-
-
 window.addEventListener("load", async () => {
 
     let rec = false;
@@ -26,6 +24,8 @@ window.addEventListener("load", async () => {
         if (savedLocal) { document.getElementById("id-end").style.display = 'none'; };
     };
 });
+
+window.addEventListener("resize", adjustPosition);
 
 /*
 async function unregisterServiceWorkers() {
@@ -532,4 +532,22 @@ function verseHighlight(id) {
     closeBoxes();
     boxOpen = 0;
     setQuerystring('vh', vh);
+};
+
+function locateMenus(box) {
+
+    // Select the divs
+    const firstDiv = document.getElementById("id-header1");
+    const secondDiv = document.getElementById(box);
+    const contentHeight = firstDiv.clientHeight;
+    const firstDivBottom = firstDiv.offsetTop + contentHeight;
+    secondDiv.style.top = `${firstDivBottom}px`;
+
+};
+
+function adjustPosition() {
+    locateMenus('id-versions');
+    locateMenus('id-books');
+    locateMenus('id-chapters');
+    locateMenus('id-verses');
 };
