@@ -21,8 +21,8 @@
 
     <script>
 
-        const scope = '/';
-        //const scope = '/TAB-Tester/';
+        //const scope = '/';
+        const scope = '/TAB-Tester/';
 
         async function saveLocal() {
             if ('serviceWorker' in navigator) {   //This goes in the client side javascript
@@ -47,6 +47,7 @@
             document.getElementById('id-TWFcontainer').style.display = 'none';
             TWFopen = false;
         };
+        window.addEventListener("resize", adjustPosition);
     </script>
 
 </head>

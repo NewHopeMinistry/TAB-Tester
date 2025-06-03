@@ -61,7 +61,7 @@ p { font-size: 1.06rem; }
 .cs-books,
 .cs-verses,
 .cs-chapters,
-.cs-versions { display: none; position: absolute; top: 13%; left: 50%; height: 69%; transform: translate(-50%); background-color: #f1f1f1; color: black; box-shadow: 0px 8px 16px 0px var(--shadowColor); border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; z-index: 1; }
+.cs-versions { display: none; position: absolute; left: 50%; height: 69%; transform: translate(-50%); background-color: #f1f1f1; color: black; box-shadow: 0px 8px 16px 0px var(--shadowColor); border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; z-index: 1; }
 .cs-books { width: 28%; }
 .cs-verses,
 .cs-chapters { height: max-content; max-height: 80%; width: 21%; overflow: hidden; overflow-y: scroll; }
@@ -178,9 +178,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 11%; width: 100%; }
+    .cs-books { width: 100%; }
     .cs-verses,
-    .cs-chapters { top: 11%; width: 80%; }
+    .cs-chapters { width: 80%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.5em; }
     .cs-searchBtn { width: 20%; }
@@ -192,9 +192,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 13%; width: 100%; }
+    .cs-books { width: 100%; }
     .cs-verses,
-    .cs-chapters { top: 13%; width: 75%; }
+    .cs-chapters { width: 75%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.2em; }
     .cs-searchBtn { width: 20%; }
@@ -207,9 +207,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 12%; width: 100%; }
+    .cs-books { width: 100%; }
     .cs-verses,
-    .cs-chapters { top: 12%; width: 73%; }
+    .cs-chapters { width: 73%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.5em; }
     .cs-searchBtn { width: 20%; }
@@ -222,9 +222,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 12%; width: 100%; }
+    .cs-books { width: 100%; }
     .cs-verses,
-    .cs-chapters { top: 12%; width: 73%; }
+    .cs-chapters { width: 73%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.9em; }
     .cs-searchBtn { width: 20%; }
@@ -237,9 +237,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 10%; width: 100%; }
+    .cs-books { width: 100%; }
     .cs-verses,
-    .cs-chapters { top: 10%; width: 67%; }
+    .cs-chapters { width: 67%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.8em; }
     .cs-searchBtn { width: 20%; }
@@ -252,9 +252,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 10.9%; width: 100%; }
+    .cs-books { width: 100%; }
     .cs-verses,
-    .cs-chapters { top: 10.9%; width: 64%; }
+    .cs-chapters { width: 64%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.8em; }
     .cs-searchBtn { width: 20%; }
@@ -267,9 +267,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 10%; width: 82%; }
+    .cs-books { width: 82%; }
     .cs-verses,
-    .cs-chapters { top: 10%; width: 63%; }
+    .cs-chapters { width: 63%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.5em; }
     .cs-searchBtn { width: 20%; }
@@ -284,9 +284,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 9.2%; width: 52%; }
+    .cs-books { width: 52%; }
     .cs-verses,
-    .cs-chapters { top: 9.2%; width: 38%; }
+    .cs-chapters { width: 38%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 5em; }
     .cs-searchBtn { width: 20%; }
@@ -299,9 +299,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 8.3%; width: 52%; }
+    .cs-books { width: 52%; }
     .cs-verses,
-    .cs-chapters { top: 8.3%; width: 35%; }
+    .cs-chapters { width: 35%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 5.1em; }
     .cs-searchBtn { width: 20%; }
@@ -314,9 +314,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 8%; width: 50%; }
+    .cs-books { width: 50%; }
     .cs-verses,
-    .cs-chapters { top: 8%; width: 34%; }
+    .cs-chapters { width: 34%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 5.6em; }
     .cs-searchBtn { width: 20%; }
@@ -329,9 +329,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 100%; border-radius: 0; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 8%; width: 45%; }
+    .cs-books { width: 45%; }
     .cs-verses,
-    .cs-chapters { top: 8%; width: 32%; }
+    .cs-chapters { width: 32%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 6em; }
     .cs-searchBtn { width: 20%; }
@@ -344,9 +344,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 90%; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 13%; width: 40%; }
+    .cs-books { width: 40%; }
     .cs-verses,
-    .cs-chapters { top: 13%; width: 28%; }
+    .cs-chapters { width: 28%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 4.9em; }
     .cs-searchBtn { width: 20%; }
@@ -359,9 +359,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 90%; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 7%; width: 40%; }
+    .cs-books { width: 40%; }
     .cs-verses,
-    .cs-chapters { top: 7%; width: 28%; }
+    .cs-chapters { width: 28%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 5.9em; }
     .cs-searchBtn { width: 20%; }
@@ -375,9 +375,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 70%; border-radius: 6px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 12.2%; width: 32%; }
+    .cs-books { width: 32%; }
     .cs-verses,
-    .cs-chapters { top: 12.2%; width: 22%; }
+    .cs-chapters { width: 22%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 80%; margin-top: 5em; }
     .cs-searchBtn { width: 20%; }
@@ -391,9 +391,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 70%; border-radius: 6px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 13.1%; width: 32%; }
+    .cs-books { width: 32%; }
     .cs-verses,
-    .cs-chapters { top: 13.1%; width: 22.5%; }
+    .cs-chapters { width: 22.5%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 80%; margin-top: 5.7em; }
     .cs-searchBtn { width: 20%; }
@@ -407,9 +407,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 70%; border-radius: 6px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 12.2%; width: 32%; }
+    .cs-books { width: 32%; }
     .cs-verses,
-    .cs-chapters { top: 12.2%; width: 21%; }
+    .cs-chapters { width: 21%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 5.4em; }
     .cs-searchBtn { width: 20%; }
@@ -423,9 +423,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 70%; border-radius: 6px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 10.2%; width: 28%; }
+    .cs-books { width: 28%; }
     .cs-verses,
-    .cs-chapters { top: 10.2%; width: 20%; }
+    .cs-chapters { width: 20%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 6.5em; }
     .cs-searchBtn { width: 20%; }
@@ -440,9 +440,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 60%; border-radius: 6px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 11.2%; width: 28%; }
+    .cs-books { width: 28%; }
     .cs-verses,
-    .cs-chapters { top: 11.2%; width: 19%; }
+    .cs-chapters { width: 19%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 5.2m; }
     .cs-searchBtn { width: 20%; }
@@ -456,9 +456,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 60%; border-radius: 8px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 9.2%; width: 21%; }
+    .cs-books { width: 21%; }
     .cs-verses,
-    .cs-chapters { top: 9.2%; width: 15%; }
+    .cs-chapters { width: 15%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 5em; }
     .cs-searchBtn { width: 20%; }
@@ -472,9 +472,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 60%; border-radius: 6px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 9.3%; width: 21%; }
+    .cs-books { width: 21%; }
     .cs-verses,
-    .cs-chapters { top: 9.3%; width: 15%; }
+    .cs-chapters { width: 15%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 6.3em; }
     .cs-searchBtn { width: 20%; }
@@ -489,9 +489,9 @@ p { font-size: 1.06rem; }
     .cs-mainPage { width: 60%; border-radius: 6px; }
     .cs-page { margin-top: 2em; width: 90%; }
     .cs-versions,
-    .cs-books { top: 9.3%; width: 17%; }
+    .cs-books { width: 17%; }
     .cs-verses,
-    .cs-chapters { top: 9.3%; width: 11.5%; }
+    .cs-chapters { width: 11.5%; }
     .cs-chapter { font-size: 1.3rem; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; margin-top: 7.3em; }

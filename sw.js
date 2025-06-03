@@ -60,15 +60,19 @@ self.addEventListener('activate', async (event) => {
 
     event.waitUntil(
         (async () => {
-
-            const cacheAllowList = [MAIN_CACHE, VERSION_CACHE];
-            const keys = await caches.keys();
-            await Promise.all(keys.map(async (key) => {
-                if (!cacheAllowList.includes(key)) { await caches.delete(key); };
-            }));
+            await deleteCaches();
         })()
     );
 });
+
+async function deleteCaches() {
+
+    const cacheAllowList = [MAIN_CACHE, VERSION_CACHE];
+    const keys = await caches.keys();
+    await Promise.all(keys.map(async (key) => {
+        if (!cacheAllowList.includes(key)) { await caches.delete(key); };
+    }));
+};
 
 async function deleteCachedFile(fileName) {
     const cache = await caches.open(MAIN_CACHE);
