@@ -21,8 +21,8 @@
 
     <script>
 
-        //const scope = '/';
-        const scope = '/TAB-Tester/';
+        const scope = '/';
+        //const scope = '/TAB-Tester/';
 
         async function saveLocal() {
             if ('serviceWorker' in navigator) {   //This goes in the client side javascript
@@ -79,7 +79,6 @@
         <div id="id-TWFcontainer" class="cs-TWFcontainer">
             <div id="id-TWF" class="cs-TWF">
                 <span id="id-TWFspan" class="cs-TWFspan"></span>
-
             </div>
             <span id="id-TWFedited" class="cs-TWFspan">Last Edited:</span>
             <div id="id-closeTWF" class="cs-closeTWF cs-TWFspan" onclick="closeTWF()" title="Close Box">&#x2715</div>
@@ -108,7 +107,7 @@
     <div id="id-searchContainer" class="cs-searchContainer">
         <br>
         <h2 class="cs-searchTitle">Search Bible Verses</span></h2>
-        <div class="cs-searchCase">spelling & case sensitive</div>
+        <div class="cs-searchCase"><span id="id-searchVersion"></span><br>spelling & case sensitive</div>
         <div id="id-searchPage" class="cs-searchPage">
             <div id="id-searchBox" class="cs-searchBox" type="text" contentEditable="true"
                 data-placeholder="Search..." onkeydown="searchKeyDown()" tabindex="0" onfocus="searchFocus()"></div>
