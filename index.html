@@ -10,7 +10,6 @@
     <title>The Ark Bible</title>
     <link async rel="stylesheet" type="text/css" href="css/index.css">
     <link defer rel="stylesheet" type="text/css" href="css/lateload.css">
-    <!--<link rel="manifest" href="manifest.json"> ! delete when testing the serviceworker-->
     <link rel="manifest" href="manifest.json">
 
     <script src="html/js/htmlvariables.js"></script>
@@ -45,6 +44,7 @@
 
         function closeTWF() {
             document.getElementById('id-TWFcontainer').style.display = 'none';
+            document.getElementById('id-pageContainer').style.marginTop = '3.5em';
             TWFopen = false;
         };
     </script>
