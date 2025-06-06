@@ -1,0 +1,78 @@
+<style>
+    .cs-books {
+        display: none;
+        position: absolute;
+        left: 50%;
+        height: 69%;
+        width: max-content;
+        transform: translate(-50%);
+        background-color: #f1f1f1;
+        color: black;
+        box-shadow: 0px 8px 16px 0px var(--shadowColor);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        z-index: 1;
+    }
+
+    .cs-book {
+        padding: .3em;
+        padding-left: .6em;
+        padding-right: .6em;
+        font-size: 1.3rem;
+        width: 50%;
+    }
+
+    /*.cs-chronBook { padding-right: 3em; }*/
+    .cs-thesBook {
+        white-space: nowrap;
+    }
+
+    .cs-endBook {
+        padding: .3em;
+        padding-left: .6em;
+        padding-right: .6em;
+        width: 50%;
+        font-size: 1.3rem;
+    }
+
+    .cs-bookRight {
+        border-right: 1px solid black;
+    }
+
+    .cs-bookLine {
+        position: relative;
+        display: flex;
+        width: 100%;
+    }
+</style>
+
+<div id="id-books" class="cs-books" style="display: none;">
+    <div class="cs-bookLine">
+        <div id="id-book10" class="cs-book cs-bookRight" data-bid="10" data-chapters="24">2 Samuel</div>
+        <div id="id-book49" class="cs-book" data-bid="49" data-chapters="6">Ephesians</div>
+    </div>
+    <div class="cs-bookLine">
+        <div id="id-book11" class="cs-book cs-bookRight" data-bid="11" data-chapters="22">1 Kings</div>
+        <div id="id-book50" class="cs-book" data-bid="50" data-chapters="4">Philippians</div>
+    </div>
+    <div class="cs-bookLine">
+        <div id="id-book12" class="cs-book cs-bookRight" data-bid="12" data-chapters="25">2 Kings</div>
+        <div id="id-book51" class="cs-book" data-bid="51" data-chapters="4">Colossians</div>
+    </div>
+    <div class="cs-bookLine">
+        <div id="id-book13" class="cs-book cs-bookRight" data-bid="13" data-chapters="29">1 Chronicles</div>
+        <div id="id-book52" class="cs-book cs-thesBook" data-bid="52" data-chapters="5">1 Thessalonians</div>
+    </div>
+    <div class="cs-bookLine">
+        <div id="id-book14" class="cs-book cs-bookRight" data-bid="14" data-chapters="36">2 Chronicles</div>
+        <div id="id-book53" class="cs-book cs-thesBook" data-bid="53" data-chapters="3">2 Thessalonians</div>
+    </div>
+    <div class="cs-bookLine">
+        <div id="id-book15" class="cs-book cs-bookRight" data-bid="15" data-chapters="10">Ezra</div>
+        <div id="id-book54" class="cs-book" data-bid="54" data-chapters="6">1 Timothy</div>
+    </div>
+    <div class="cs-bookLine">
+        <div id="id-book16" class="cs-book cs-bookRight" data-bid="16" data-chapters="13">Nehemiah</div>
+        <div id="id-book55" class="cs-book" data-bid="55" data-chapters="4">2 Timothy</div>
+    </div>
+</div>

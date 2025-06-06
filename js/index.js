@@ -13,6 +13,7 @@ window.addEventListener("load", async () => {
             document.getElementById("id-randomChapter").style.display = 'block';
             document.getElementById('id-TWFspan').textContent = TWFmsg;
             if (dateEdited) { document.getElementById('id-TWFedited').textContent = `Last Edited: ${dateEdited}`; };
+            bookWidth();
         }, 130);
     };
     if (rec) {
@@ -26,6 +27,8 @@ window.addEventListener("load", async () => {
 });
 
 window.addEventListener("resize", adjustPosition);
+
+
 
 /*
 async function unregisterServiceWorkers() {
@@ -227,6 +230,8 @@ async function LoadBooks() {
             });
             div1.id = `id-book${newBooks[ii].id}`;
             div1.classList.add('cs-book');
+            //if (oldBooks[ii].id === 13 || oldBooks[ii].id === 14) { div1.classList.add('cs-chronBook'); };
+            //if (newBooks[ii].id === 52 || newBooks[ii].id === 53) { div1.classList.add('cs-thesBook'); };
             div1.dataset.bid = newBooks[ii].id;
             div1.dataset.chapters = newBooks[ii].c;
             div1.textContent = newBooks[ii].t;
@@ -326,6 +331,8 @@ async function loadVerses() {
         x = 0;
         menuVerses.appendChild(div);
     };
+
+    menuVerses.appendChild(div);
     div = document.createElement('div');
     div.classList.add('cs-lastLine');
     div.textContent = '...';
@@ -536,13 +543,11 @@ function verseHighlight(id) {
 
 function locateMenus(box) {
 
-    // Select the divs
     const firstDiv = document.getElementById("id-header1");
     const secondDiv = document.getElementById(box);
     const contentHeight = firstDiv.clientHeight;
     const firstDivBottom = firstDiv.offsetTop + contentHeight;
     secondDiv.style.top = `${firstDivBottom}px`;
-
 };
 
 function adjustPosition() {
@@ -551,3 +556,15 @@ function adjustPosition() {
     locateMenus('id-chapters');
     locateMenus('id-verses');
 };
+
+
+async function bookWidth() {
+    let element = document.getElementById("id-books");
+    element.style.display = "block";
+    let width = element.offsetWidth;
+    element.style.display = "none";
+    width = (width + 31) + "px";
+    document.documentElement.style.setProperty('--bookWidth', width);
+    element.classList.remove("cs-booksW");
+    element.classList.add("cs-booksW1");
+}
