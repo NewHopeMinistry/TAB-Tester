@@ -168,7 +168,6 @@ p { font-size: 1.06rem; }
 
 /* Media Queries */
 @media (max-width: 295px) {
-    .cs-TWFcontainer { width: 95%; }
     .cs-verse,
     .cs-chapter { font-size: 1.1em; height: 1.5em; width: 1.5em; }
 }
@@ -176,6 +175,7 @@ p { font-size: 1.06rem; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
 }
 @media (max-width: 530px) {
+
     .cs-search { transform: scale(.7);  transform-origin: center center; top: 23%; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
     .cs-menuBtn { font-size: .85rem; }
@@ -184,6 +184,7 @@ p { font-size: 1.06rem; }
     .cs-headline,
     .cs-bottomLine { font-size: 1.1rem; }
 }
+@media (max-width: 1024px) { .cs-TWFcontainer { width: 95%; } }
 
 @media (max-width: 344px) {
     .cs-header1 { height: 12%; }

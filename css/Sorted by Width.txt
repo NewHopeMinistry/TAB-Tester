@@ -105,8 +105,6 @@ Heights:
 1440
 
 
-
-
 /* Height Breakpoints */
 @media (max-height: 480px) {
 
