@@ -175,7 +175,6 @@ p { font-size: 1.06rem; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
 }
 @media (max-width: 530px) {
-
     .cs-search { transform: scale(.7);  transform-origin: center center; top: 23%; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
     .cs-menuBtn { font-size: .85rem; }
