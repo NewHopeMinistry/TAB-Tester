@@ -541,7 +541,7 @@ function verseHighlight(id) {
     setQuerystring('vh', vh);
 };
 
-function locateMenus(box) {
+function locateBox(box) {
 
     const firstDiv = document.getElementById("id-header1");
     const secondDiv = document.getElementById(box);
@@ -551,12 +551,11 @@ function locateMenus(box) {
 };
 
 function adjustPosition() {
-    locateMenus('id-versions');
-    locateMenus('id-books');
-    locateMenus('id-chapters');
-    locateMenus('id-verses');
+    locateBox('id-versions');
+    locateBox('id-books');
+    locateBox('id-chapters');
+    locateBox('id-verses');
 };
-
 
 async function bookWidth() {
     let element = document.getElementById("id-books");
@@ -567,4 +566,5 @@ async function bookWidth() {
     document.documentElement.style.setProperty('--bookWidth', width);
     element.classList.remove("cs-booksW");
     element.classList.add("cs-booksW1");
-}
+    document.getElementById("id-versions").style.width = width;
+};

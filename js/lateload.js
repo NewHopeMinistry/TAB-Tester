@@ -58,7 +58,7 @@ function openBoxes() {
         closeBoxes();
     } else {
         boxesOpen = true;
-        locateMenus(id);
+        locateBox(id);
         document.getElementById(id).style.display = 'block';
     };
 };
@@ -271,6 +271,7 @@ function deleteData() {
     localStorage.removeItem('savedLocal');
     document.getElementById('top').scrollIntoView({ block: 'start' });
     unregisterServiceWorkers();
+    alert('All locally stored data has been deleted, The Ark Bible app will only be available with an active internet connection, unless you decide to reinstall it later!')
 };
 
 function resetDefaults() {

@@ -1,4 +1,4 @@
-const version = 21;
+const version = 20;
 var oldVersion = version - 1;
 // Change scope in index.html
 
@@ -52,6 +52,7 @@ self.addEventListener('install', event => {
                     if (newResponse) { await cache.put(url, newResponse); };
                 };
             };
+            self.skipWaiting();
         })()
     );
 });
@@ -61,6 +62,7 @@ self.addEventListener('activate', async (event) => {
     event.waitUntil(
         (async () => {
             await deleteCaches();
+            self.clients.claim();
         })()
     );
 });

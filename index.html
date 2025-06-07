@@ -20,23 +20,29 @@
 
     <script>
 
-        //const scope = '/';
-        const scope = '/TAB-Tester/';
+        const scope = '/';
+        //const scope = '/TAB-Tester/';
 
         async function saveLocal() {
-            if ('serviceWorker' in navigator) {   //This goes in the client side javascript
-                (async () => {
-                    try {
-                        const registration = await navigator.serviceWorker.register('sw.js', { scope: scope });
-                        console.log('Service Worker registered with scope:', registration.scope);
-                    } catch (error) {
-                        console.log('Service Worker registration failed:', error);
-                    }
-                })();
+            if (navigator.onLine) {
+                if ('serviceWorker' in navigator) {   //This goes in the client side javascript
+                    (async () => {
+                        try {
+                            const registration = await navigator.serviceWorker.register('sw.js', { scope: scope });
+                            console.log('Service Worker registered with scope:', registration.scope);
+                            if (registration) { alert('The Ark Bible files have been installed locally. You must restart the browser with an active internet connection for changes to take affect. Once the browser has been restarted with an active internet connection the first time, the app will be available offline afterwards. Any versions of the Bible accessed through the versions menu, will have to be first accessed with an internet connection before it is available offline.'); };
+                        } catch (error) {
+                            console.log('Service Worker registration failed:', error);
+                        }
+                    })();
+                };
+                document.getElementById('id-end').style.display = 'none';
+                localStorage.setItem("savedLocal", true);
+            } else {
+                alert('You must have an active internet connection to install The Ark Bible files locally.')
             };
-            document.getElementById('id-end').style.display = 'none';
-            localStorage.setItem("savedLocal", true);
         };
+
         function closeSave() {
             document.getElementById('id-end').style.display = 'none';
             localStorage.setItem("savedLocal", true);
@@ -165,7 +171,7 @@
 
                 <div id="id-paragraphLayout" class="cs-paragraphLayout" onclick="paragraphLayout()" title="Set format of text layout - Paragraph or Single Line">Paragraph Layout</div>
 
-                <div id="id-resetData" class="cs-resetData" onclick="deleteData()" title="Reset Local Data Storage">Delete Local Data</div>
+                <div id="id-resetData" class="cs-resetData" onclick="deleteData()" title="Delete Local Data Storage">Delete Local Data</div>
 
                 <div id="id-resetDefaults" class="cs-resetDefaults" onclick="resetDefaults()" title="Reset Defaults to Original">Reset Defaults</div>
 
