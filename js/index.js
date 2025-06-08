@@ -541,14 +541,6 @@ function verseHighlight(id) {
     setQuerystring('vh', vh);
 };
 
-function locatePage(box, mrgn = 0) {
-    const firstDiv = document.getElementById("id-header1");
-    const secondDiv = document.getElementById(box);
-    const contentHeight = firstDiv.clientHeight;
-    const firstDivBottom = firstDiv.offsetTop + contentHeight - mrgn;
-    secondDiv.style.marginTop = `${firstDivBottom}px`;
-};
-
 function locateBox(topBox, nextBox, mrgn = 0) {
     const firstDiv = document.getElementById(topBox);
     const secondDiv = document.getElementById(nextBox);
