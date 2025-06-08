@@ -541,20 +541,34 @@ function verseHighlight(id) {
     setQuerystring('vh', vh);
 };
 
-function locateBox(box) {
-
+function locatePage(box, mrgn = 0) {
     const firstDiv = document.getElementById("id-header1");
     const secondDiv = document.getElementById(box);
     const contentHeight = firstDiv.clientHeight;
-    const firstDivBottom = firstDiv.offsetTop + contentHeight;
-    secondDiv.style.top = `${firstDivBottom}px`;
+    const firstDivBottom = firstDiv.offsetTop + contentHeight - mrgn;
+    secondDiv.style.marginTop = `${firstDivBottom}px`;
+};
+
+function locateBox(topBox, nextBox, mrgn = 0) {
+    const firstDiv = document.getElementById(topBox);
+    const secondDiv = document.getElementById(nextBox);
+    const contentHeight = firstDiv.clientHeight;
+    const firstDivBottom = firstDiv.offsetTop + contentHeight - mrgn;
+    if (mrgn) {
+        secondDiv.style.position = 'relative';
+        secondDiv.style.marginTop = `${firstDivBottom}px`;
+        secondDiv.style.position = 'static';
+    } else {
+        secondDiv.style.top = `${firstDivBottom}px`;
+    };
 };
 
 function adjustPosition() {
-    locateBox('id-versions');
-    locateBox('id-books');
-    locateBox('id-chapters');
-    locateBox('id-verses');
+    locateBox('id-header1', 'id-versions');
+    locateBox('id-header1', 'id-books');
+    locateBox('id-header1', 'id-chapters');
+    locateBox('id-header1', 'id-verses');
+    locateBox('id-header1', 'id-pageContainer', 20);
 };
 
 async function bookWidth() {

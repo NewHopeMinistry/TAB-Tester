@@ -50,7 +50,7 @@
 
         function closeTWF() {
             document.getElementById('id-TWFcontainer').style.display = 'none';
-            document.getElementById('id-pageContainer').style.marginTop = '3.5em';
+            locateBox('id-header1', 'id-pageContainer', 20);
             TWFopen = false;
         };
     </script>
@@ -74,7 +74,7 @@
                     title="Select A Book">Genesis</button>
                 <button id="id-MenuBtn3" class="cs-menuBtn cs-menuBtn3" onclick="openBoxes()"
                     title="Select A Chapter">1:</button>
-                <button id="id-MenuBtn4" class="cs-menuBtn cs-menuBtn4" onclick="openBoxes()"
+                <button id="id-MenuBtn4" class="cs-menuBtn" onclick="openBoxes()"
                     title="Highlight the Selected Verse">1</button>
             </div>
         </div>

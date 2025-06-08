@@ -58,7 +58,7 @@ function openBoxes() {
         closeBoxes();
     } else {
         boxesOpen = true;
-        locateBox(id);
+        locateBox('id-header1', id);
         document.getElementById(id).style.display = 'block';
     };
 };
