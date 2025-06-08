@@ -560,7 +560,7 @@ function adjustPosition() {
     locateBox('id-header1', 'id-books');
     locateBox('id-header1', 'id-chapters');
     locateBox('id-header1', 'id-verses');
-    locateBox('id-header1', 'id-pageContainer', 20);
+    if(!twfOpen) { locateBox('id-header1', 'id-pageContainer', 20); };
 };
 
 async function bookWidth() {
