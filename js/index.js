@@ -415,6 +415,7 @@ async function changeVersion() {
     document.getElementById('id-searchBox').textContent = '';
     searchIndex = null;
     boxOpen = 0;
+    locateBox('id-header1', 'id-pageContainer', 20);
     Promise.resolve(true);
 };
 
