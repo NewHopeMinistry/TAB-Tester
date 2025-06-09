@@ -205,7 +205,7 @@ p { font-size: 1.06rem; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
     .cs-menuBtn { font-size: .85rem; }
     .cs-books,
-    .cs-versions { width: 310px; }
+    .cs-versions { max-width: 310px; }
     .cs-book,
     .cs-headline,
     .cs-bottomLine { font-size: 1.1rem; }
@@ -214,6 +214,8 @@ p { font-size: 1.06rem; }
 @media (max-width: 480px) {
     .cs-search { right: 15%; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
+    .cs-books,
+    .cs-versions { max-width: 99%; }
     .cs-page { width: 90%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; }

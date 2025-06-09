@@ -568,7 +568,7 @@ async function bookWidth() {
     element.style.display = "block";
     let width = element.offsetWidth;
     element.style.display = "none";
-    width = (width + 31) + "px";
+    width = (width + 36) + "px";
     document.documentElement.style.setProperty('--bookWidth', width);
     element.classList.remove("cs-booksW");
     element.classList.add("cs-booksW1");
