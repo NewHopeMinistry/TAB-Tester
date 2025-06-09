@@ -203,9 +203,9 @@ p { font-size: 1.06rem; }
 @media (max-width: 768px) {
     .cs-search { transform: scale(.7);  transform-origin: center center; top: 23%; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
-    .cs-menuBtn { font-size: .85rem; }
+    .cs-menuBtn { font-size: 1rem; }
     .cs-books,
-    .cs-versions { max-width: 330px; }
+    .cs-versions { width: 330px; }
     .cs-book,
     .cs-headline,
     .cs-bottomLine { font-size: 1.1rem; }
@@ -215,7 +215,7 @@ p { font-size: 1.06rem; }
     .cs-search { right: 15%; }
     .cs-menu1 { position: absolute; left: 20%; transform: translate(-25%); }
     .cs-books,
-    .cs-versions { max-width: 99%; }
+    .cs-versions { width: 80%; }
     .cs-page { width: 90%; }
     .cs-searchPage { width: 95%; }
     .cs-searchContainer { width: 100%; }
@@ -225,6 +225,8 @@ p { font-size: 1.06rem; }
 @media (max-width: 348px) {
     .cs-verse,
     .cs-chapter { font-size: 1.2em; height: 1.6em; width: 1.6em; }
+    .cs-books,
+    .cs-versions { width: 100%; }
     .cs-menuBtn { font-size: .80rem; }
     .cs-book,
     .cs-version { font-size: 1.1rem; }
@@ -232,7 +234,7 @@ p { font-size: 1.06rem; }
 
 
 /*? max Height */
-@media (max-height: 1368px) { .cs-mainPage { margin-top: .5em; }}
+@media (max-height: 1368px) { .cs-mainPage { margin-top: .5em; } .cs-TWFcontainer { margin-top: 5.5em; } }
 @media (max-height: 1080px) {
     .cs-header1 { height: 7%; }
     .cs-page { margin-top: 2.5em; }
@@ -241,8 +243,10 @@ p { font-size: 1.06rem; }
     .cs-versions { height: 49%; }
 }
 @media (max-height: 1024px) {
+    .cs-header1 { height: 9%; }
     .cs-books,
     .cs-versions { height: 48%; }
+    .cs-TWFcontainer { margin-top: 5.5em; }
 }
 @media (max-height: 932px) {
     .cs-header1 { height: 9%; }
@@ -257,6 +261,7 @@ p { font-size: 1.06rem; }
     .cs-versions { height: 70%; }
 }
 @media (max-height: 668px) {
+     .cs-header1 { height: 11%; }
     .cs-page { margin-top: 2em; }
     .cs-searchContainer { margin-top: 5.9em; }
     .cs-books,
