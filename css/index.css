@@ -234,34 +234,34 @@ p { font-size: 1.06rem; }
 
 
 /*? max Height */
-@media (max-height: 1368px) { .cs-mainPage { margin-top: .5em; } .cs-TWFcontainer { margin-top: 5.5em; } }
-@media (max-height: 1080px) {
+@media (max-height: 1368px) {
     .cs-header1 { height: 7%; }
+    .cs-mainPage { margin-top: .5em; }
+    .cs-TWFcontainer { margin-top: 6.5em; }
+}
+@media (max-height: 1080px) {
     .cs-page { margin-top: 2.5em; }
     .cs-searchContainer { margin-top: 5.5em; }
     .cs-books,
     .cs-versions { height: 49%; }
 }
 @media (max-height: 1024px) {
-    .cs-header1 { height: 9%; }
+    .cs-header1 { height: 10%; }
     .cs-books,
     .cs-versions { height: 48%; }
-    .cs-TWFcontainer { margin-top: 5.5em; }
 }
 @media (max-height: 932px) {
-    .cs-header1 { height: 9%; }
     .cs-books,
     .cs-versions { height: 54%; }
 }
 @media (max-height: 741px) {
-    .cs-header1 { height: 10%; }
     .cs-page { margin-top: 2em; }
     .cs-searchContainer { margin-top: 5em; }
     .cs-books,
     .cs-versions { height: 70%; }
 }
 @media (max-height: 668px) {
-     .cs-header1 { height: 11%; }
+    .cs-header1 { height: 12%; }
     .cs-page { margin-top: 2em; }
     .cs-searchContainer { margin-top: 5.9em; }
     .cs-books,
