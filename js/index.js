@@ -393,20 +393,24 @@ async function changeVersion() {
         if (isNumeric(selectedVerseID)) { selectedVerseID = `id-verse${selectedVerseID}`};
         verseHighlight(selectedVerseID);
     };
-    if (versions[idx].ar === 'TWF') {
-        if(TWFopen) { document.getElementById('id-TWFcontainer').style.display = 'block'; };
+    let i = verses.findIndex(rec => rec.bid === 40 && rec.cn === 3 && rec.vn === 15);
+    if (verses[i].jq) {
         document.getElementById('id-redLetter').style.display = 'block';
-        document.getElementById('id-paragraphLayout').style.display = 'block';
         if (redLetterDefault) {
             document.getElementById('id-redLetter').textContent = 'Black Letter';
         } else {
             document.getElementById('id-redLetter').textContent = 'Red Letter';
         };
     } else {
-        document.getElementById('id-TWFcontainer').style.display = 'none';
         document.getElementById('id-redLetter').style.display = 'none';
-        document.getElementById('id-paragraphLayout').style.display = 'none';
     };
+    if (verses[0].pn) {
+        document.getElementById('id-paragraphLayout').style.display = 'block';
+    } else { document.getElementById('id-paragraphLayout').style.display = 'none'; };
+    if (versions[idx].ar === 'TWF') {
+        if(TWFopen) { document.getElementById('id-TWFcontainer').style.display = 'block'; };
+    } else { document.getElementById('id-TWFcontainer').style.display = 'none'; };
+
     removeElements('id-searchResults');
     document.getElementById('id-searchBox').textContent = '';
     searchIndex = null;
