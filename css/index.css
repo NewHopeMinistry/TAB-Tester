@@ -245,7 +245,7 @@ p { font-size: 1.06rem; }
     .cs-versions { height: 49%; }
 }
 @media (max-height: 1024px) {
-    .cs-header1 { height: 10%; }
+    .cs-header1 { height: 11%; }
     .cs-books,
     .cs-versions { height: 48%; }
 }
