@@ -1,4 +1,4 @@
-const version = 15;
+const version = 16;
 var oldVersion = version - 1;
 // Change scope in index.html
 
@@ -25,6 +25,7 @@ const urlsToCache = [
     'html/history.html',
     'html/images/icons/homelogo-512.png',
     'html/license.html',
+    'html/qr.html',
     'html/statement.html',
     'html/twfabout.html'
 ];
