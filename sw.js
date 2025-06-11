@@ -1,4 +1,4 @@
-const version = 16;
+const version = 15;
 var oldVersion = version - 1;
 // Change scope in index.html
 

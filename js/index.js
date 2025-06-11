@@ -19,8 +19,10 @@ window.addEventListener("load", async () => {
     if (rec) {
         if (setTheme === '1') {
             darkTheme();
+            toggleTheme();
             rotateTheme = false;
         };
+        //changeTheme();
         //unregisterServiceWorkers();
         if (savedLocal) { document.getElementById("id-end").style.display = 'none'; };
     };

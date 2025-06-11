@@ -28,9 +28,10 @@ help.html			1.9
 history.html		9.1
 homelogo-512.png	31.6
 license.html		3.8
+qr.html				1.73
 statement.html		3.5
 twfabout.html		4.2
 ---------------------------
-		Total:	79.1 kb
+		Total:		80.9 kb
 
 TWFVerses.json		1,603 kb

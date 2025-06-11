@@ -117,9 +117,9 @@ p { font-size: 1.06rem; }
 .cs-glossary { position: relative; margin-top: 1.2em; margin-bottom: 1.2em; color: var(--whiteText); width: 99%; }
 .cs-chat { display: flex; text-decoration: none; height: 2em; width: 20em; background-color: #ba0e0e; color: white; border-radius: 6px; margin: auto; justify-content:center; align-items: center; }
 
-.cs-svgTheme { left: 0; height: 1.2em; width: 1.2em; background-color: var(--bannerBackground); }
-.cs-svgTheme1 { position: absolute; left: 0; visibility: hidden; }
-.cs-themeNote { position: absolute; padding-left: 1.5em; vertical-align: middle; text-decoration: underline; font-size: .9rem; }
+.cs-darkTheme { background-color: #3d3636; color: white; }
+.cs-theme { cursor: pointer; border: none; padding-bottom: .3em; border-radius: 3px; }
+.cs-themeNote { position: absolute; padding-left: 1em; vertical-align: middle; text-decoration: underline; font-size: .9rem; }
 
 .cs-font,
 .cs-redLetter,

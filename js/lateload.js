@@ -190,20 +190,21 @@ function darkTheme() {
     document.getElementById('id-endLine').style.color = '#010914';
 };
 
+function toggleTheme() {
+    //document.body.classList.toggle("dark-mode");
+    let theme = document.getElementById("id-theme");
+    theme.classList.toggle("cs-darkTheme");
+    theme.textContent = theme.classList.contains("cs-darkTheme") ?  "🌙" : "☀️";
+}
+
 function changeTheme() {
 
-    const svg = document.getElementById('id-svg');
-    const svg1 = document.getElementById('id-svgRotate');
-
+    toggleTheme();
     if (rotateTheme) {
-        svg.style.visibility = 'visible';
-        svg1.style.visibility = 'hidden';
         darkTheme();
         rotateTheme = false;
         localStorage.setItem("setTheme", '1');
     } else {
-        svg.style.visibility = 'hidden';
-        svg1.style.visibility = 'visible';
         lightTheme();
         rotateTheme = true;
         localStorage.setItem("setTheme", '0');
@@ -279,11 +280,7 @@ function resetDefaults() {
     let confirmed = confirm('Changes to The Ark Bible settings will take effect immediately! All settings will be reset to their default values, click OK to continue or Cancel to abort!');
     if (!confirmed) { return; };
 
-    const svg = document.getElementById('id-svg');
-    const svg1 = document.getElementById('id-svgRotate');
-    svg.style.visibility = 'hidden';
-    svg1.style.visibility = 'visible';
-    lightTheme();
+    changeTheme();
     rotateTheme = true;
     changeFontSize('d');
     localStorage.removeItem('setTheme');
