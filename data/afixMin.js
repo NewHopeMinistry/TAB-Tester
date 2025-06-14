@@ -1,6 +1,8 @@
 // Fix minified text
 // :abcdefghijklmnopqrstuvwxyz
 // :ABCDEFGHIJKLMNOPQRSTUVWXYZ
+// [\u200B\u200C\u200D\u200E\u200F\uFEFF\u2028\u2029]
+
 const fs = require('fs');
 var versions = [
     {
