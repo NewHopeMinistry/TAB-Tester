@@ -395,8 +395,13 @@ async function changeVersion() {
         if (isNumeric(selectedVerseID)) { selectedVerseID = `id-verse${selectedVerseID}`};
         verseHighlight(selectedVerseID);
     };
-    let i = verses.findIndex(rec => rec.bid === 40 && rec.cn === 3 && rec.vn === 15);
-    if (verses[i].jq) {
+
+    if (versions[idx].sch) {
+        document.getElementById('id-search').style.display = 'block';
+    } else {
+        document.getElementById('id-search').style.display = 'none';
+    };
+    if (versions[idx].rdl) {
         document.getElementById('id-redLetter').style.display = 'block';
         if (redLetterDefault) {
             document.getElementById('id-redLetter').textContent = 'Black Letter';

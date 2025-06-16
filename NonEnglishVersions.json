@@ -1,0 +1,289 @@
+[
+    {
+        "ar": "ALB",
+        "id": 2001,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Albanian Bible Version - Versioni Shqip i Biblës"
+    },
+    {
+        "ar": "AVD",
+        "id": 2002,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Arabic (العربية) Smith Van Dyke"
+    },
+    {
+        "ar": "CUS",
+        "id": 2003,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Chinese Union (Simplified)"
+    },
+    {
+        "ar": "CUT",
+        "id": 2004,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Chinese Union (Traditional)"
+    },
+    {
+        "ar": "CZK",
+        "id": 2005,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Czech Bible Kralicka"
+    },
+    {
+        "ar": "DSV",
+        "id": 2006,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Dutch Staten Vertaling"
+    },
+    {
+        "ar": "FIN",
+        "id": 2007,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Finnish Bible Version (1776)"
+    },
+    {
+        "ar": "FLB",
+        "id": 2008,
+        "rdl": 0,
+        "sch": 1,
+        "t": "French La Bible de l'Épée (2005)"
+    },
+    {
+        "ar": "FLS",
+        "id": 2009,
+        "rdl": 0,
+        "sch": 1,
+        "t": "French Louis Segond Version (1910)"
+    },
+    {
+        "ar": "FMT",
+        "id": 2010,
+        "rdl": 0,
+        "sch": 1,
+        "t": "French Martin Version (1744)"
+    },
+    {
+        "ar": "FOS",
+        "id": 2011,
+        "rdl": 0,
+        "sch": 1,
+        "t": "French Ostervald Version (1996)"
+    },
+    {
+        "ar": "GEL",
+        "id": 2012,
+        "rdl": 0,
+        "sch": 1,
+        "t": "German Elberfelder Version (1871)"
+    },
+    {
+        "ar": "GER",
+        "id": 2013,
+        "rdl": 0,
+        "sch": 1,
+        "t": "German Elberfelder Version (1905)"
+    },
+    {
+        "ar": "GLB",
+        "id": 2014,
+        "rdl": 0,
+        "sch": 1,
+        "t": "German Luther Bible (1545)"
+    },
+    {
+        "ar": "GLU",
+        "id": 2015,
+        "rdl": 0,
+        "sch": 1,
+        "t": "German Luther Bible (1912)"
+    },
+    {
+        "ar": "GSH",
+        "id": 2016,
+        "rdl": 0,
+        "sch": 1,
+        "t": "German Schlachter Bibel (1951)"
+    },
+    {
+        "ar": "HIR",
+        "id": 2017,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Hindi Indian Revised Version (2017-2018)"
+    },
+    {
+        "ar": "HKV",
+        "id": 2018,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Hungarian Karoli Version"
+    },
+    {
+        "ar": "ITB",
+        "id": 2019,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Indonesian Terjemahan Baru (1994)"
+    },
+    {
+        "ar": "ITL",
+        "id": 2020,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Indonesian Terjemahan Lama"
+    },
+    {
+        "ar": "ITV",
+        "id": 2021,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Italian Diodati Version (1649)"
+    },
+    {
+        "ar": "JBY",
+        "id": 2022,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Japanese Bungo-yaku: Taisho-kaiyaku (NT) (1950), Meiji-yaku (OT) (1950/1953)"
+    },
+    {
+        "ar": "JKY",
+        "id": 2023,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Japanese Kougo-yaku (1954-1955)"
+    },
+    {
+        "ar": "KBQ",
+        "id": 2024,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Kamano-Kafe Bible"
+    },
+    {
+        "ar": "KBV",
+        "id": 2025,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Korean Bible Version"
+    },
+    {
+        "ar": "MAO",
+        "id": 2026,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Maori Bible Version"
+    },
+    {
+        "ar": "OPT",
+        "id": 2027,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Old Persian Translation (1895)"
+    },
+    {
+        "ar": "PBN",
+        "id": 2028,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Polish NOWEJ BIBLII GDANSKIEJ (2012)"
+    },
+    {
+        "ar": "PBV",
+        "id": 2029,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Polska Biblia Gdanska (1881)"
+    },
+    {
+        "ar": "PTB",
+        "id": 2030,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Portuguese Biblia Livre"
+    },
+    {
+        "ar": "PTA",
+        "id": 2031,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Portuguese Tradução de João Ferreira de Almeida Revista e Atualizada"
+    },
+    {
+        "ar": "PTC",
+        "id": 2032,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Portuguese Tradução de João Ferreira de Almeida Revista e Corrigida"
+    },
+    {
+        "ar": "RCV",
+        "id": 2033,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Romanian Cornilescu Version"
+    },
+    {
+        "ar": "RSB",
+        "id": 2034,
+        "rdl": 0,
+        "sch": 0,
+        "t": "Russian Synodal Bible (1876)"
+    },
+    {
+        "ar": "SRV",
+        "id": 2035,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Spanish Reina Valera - Reina Valera española (1909)"
+    },
+    {
+        "ar": "SRG",
+        "id": 2036,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Spanish Reina Valera Gómez (2004)"
+    },
+    {
+        "ar": "SRZ",
+        "id": 2037,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Spanish Reina Valera Gómez (2010)"
+    },
+    {
+        "ar": "SSE",
+        "id": 2038,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Spanish Sagradas Escrituras (1569)"
+    },
+    {
+        "ar": "TAB",
+        "id": 2039,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Tagalog Ang Biblia (1905)"
+    },
+    {
+        "ar": "TVB",
+        "id": 2040,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Turkish Bible Version"
+    },
+    {
+        "ar": "VCV",
+        "id": 2041,
+        "rdl": 0,
+        "sch": 1,
+        "t": "Vietnamese Cadman Version (1934)"
+    }
+]
