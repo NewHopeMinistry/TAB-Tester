@@ -23,6 +23,7 @@ function openBoxes() {
     selectedVerseID = ``;
     let ID = this.event.target.id;
     let id = '';
+    let aSelection = '';
 
     switch (ID) {
         case "id-MenuBtn1":
@@ -32,22 +33,26 @@ function openBoxes() {
                 setQuerystring('vh', vh);
                 selectedVerseID = holdSelectedVerseID;
             };
+            aSelection = activeVersionID;
             boxOpen = 1;
             break;
         case "id-MenuBtn2":
             id = 'id-books';
             if  (boxOpen === 2) { boxOpen = 0; return; };
             boxOpen = 2;
+            aSelection = activeBookID;
             break;
         case "id-MenuBtn3":
             id = 'id-chapters';
             if  (boxOpen === 3) { boxOpen = 0; return; };
             boxOpen = 3;
+            aSelection = activeChapterID;
             break;
         case "id-MenuBtn4":
             id = 'id-verses';
             if  (boxOpen === 4) { boxOpen = 0; return; };
             boxOpen = 4;
+            aSelection = selectedVerseID;
             break;
         default:
             boxOpen = 0;
@@ -60,6 +65,9 @@ function openBoxes() {
         boxesOpen = true;
         locateBox('id-header1', id);
         document.getElementById(id).style.display = 'block';
+        if (aSelection && aSelection !== '') {
+            document.getElementById(aSelection).scrollIntoView({ block: 'center' });
+        }
     };
 };
 
