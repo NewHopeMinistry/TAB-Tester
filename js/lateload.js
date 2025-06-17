@@ -19,7 +19,7 @@ function openBoxes() {
     let holdSelectedVerseID;
     if (vh) { holdSelectedVerseID = `id-verse${vh}`; };
     closeBoxes();
-    removeQueryParam('vh');
+    //removeQueryParam('vh');
     selectedVerseID = ``;
     let ID = this.event.target.id;
     let id = '';
@@ -72,6 +72,7 @@ function changeBook() {
     getChapter();
     loadChapters();
     closeBoxes();
+    selected(activeBookID, 'id-books');
     document.getElementById('top').scrollIntoView({ block: 'start' });
     boxOpen = 0;
 };
@@ -83,6 +84,7 @@ function changeChapter() {
     getChapter();
     loadChapters();
     closeBoxes();
+    selected(activeChapterID, 'id-chapters');
     document.getElementById('top').scrollIntoView({ block: 'start' });
     boxOpen = 0;
 };

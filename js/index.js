@@ -30,6 +30,17 @@ window.addEventListener("load", async () => {
 
 window.addEventListener("resize", adjustPosition);
 
+/*
+document.addEventListener("selectionchange", () => {
+    const selection = document.getSelection();
+    if (selection.isCollapsed) {
+        document.getElementById('id-MenuBtn4').textContent = '1';
+        selected(selectedVerseID, 'id-verses');
+        removeQueryParam('vh');
+        selectedVerseID = ``;
+    };
+});*/
+
 
 
 /*
@@ -155,6 +166,7 @@ async function loadVersions() {
         i++;
     };
     div = document.createElement("div");
+    div.id = 'id-lastVersionLine';
     div.classList.add("cs-lastLine");
     div.textContent = '...';
     menuVersions.appendChild(div);
@@ -248,6 +260,7 @@ async function LoadBooks() {
         ii++;
     };
     div = document.createElement('div');
+    div.id = 'id-lastBookLine';
     div.classList.add('cs-lastLine');
     div.insertAdjacentHTML('beforeend', `...`);
     menuBooks.appendChild(div);
@@ -291,6 +304,7 @@ async function loadChapters() {
         menuChapters.appendChild(div);
     };
     div = document.createElement('div');
+    div.id = 'id-lastChapterLine';
     div.classList.add('cs-lastLine');
     div.textContent = '...';
     menuChapters.appendChild(div);
@@ -335,6 +349,7 @@ async function loadVerses() {
     };
 
     menuVerses.appendChild(div);
+    div.id = 'id-lastVerseLine';
     div = document.createElement('div');
     div.classList.add('cs-lastLine');
     div.textContent = '...';
@@ -363,7 +378,7 @@ async function changeVersion() {
     let aVersion = document.getElementById(id);
     let idx = Number(aVersion.dataset.index);
     let url = `data/${versions[idx].ar}/${versions[idx].ar}Verses.json`;
-
+    selected(id, 'id-versions');
     try {
         const res = await fetch(url);
         if (!res.ok) { throw new Error(res.status); };
@@ -424,6 +439,16 @@ async function changeVersion() {
     boxOpen = 0;
     locateBox('id-header1', 'id-pageContainer', 20);
     Promise.resolve(true);
+};
+
+function selected(id, container) {
+
+    document.querySelectorAll(`#${container} *`).forEach(element => {
+        if (element.classList.contains('cs-bvSelected')) {
+            element.classList.remove('cs-bvSelected');
+        };
+    });
+    document.getElementById(id).classList.add('cs-bvSelected');
 };
 
 function isNumeric(value) { return !isNaN(value) && !isNaN(parseFloat(value)); }
@@ -504,6 +529,8 @@ async function getChapter() {
     document.getElementById('id-MenuBtn3').textContent = `${document.getElementById(activeChapterID).textContent}:`;
     setQuerystring('bid', activeBook);
     setQuerystring('cn', activeChapter);
+    selected(`id-book${activeBook}`, 'id-books')
+    selected(`id-chapter${activeChapter}`, 'id-chapters')
     document.getElementById('id-MenuBtn4').textContent = '1';
     removeQueryParam('vh');
     selectedVerseID = ``;
@@ -551,6 +578,14 @@ function verseHighlight(id) {
     closeBoxes();
     boxOpen = 0;
     setQuerystring('vh', vh);
+    selected(id, 'id-verses');
+};
+
+function unHighlight() {
+    document.getElementById('id-MenuBtn4').textContent = '1';
+    removeQueryParam('vh');
+    selected(selectedVerseID, 'id-verses');
+    selectedVerseID = ``;
 };
 
 function locateBox(topBox, nextBox, mrgn = 0) {

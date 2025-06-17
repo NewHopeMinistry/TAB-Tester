@@ -73,6 +73,7 @@ p { font-size: 1.06rem; }
 .cs-book,
 .cs-version { padding: .3em; padding-left: .6em; padding-right: .6em; font-size: 1.3rem; }
 .cs-book { width: 50%; }
+.cs-bvSelected{ background-color: #8e8c8c; color: white; }
 
 .cs-endBook { padding: .3em; padding-left: .6em; padding-right: .6em; width: 50%; font-size: 1.3rem; }
 .cs-bookRight { border-right: 1px solid black; }
