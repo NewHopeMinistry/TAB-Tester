@@ -41,7 +41,7 @@ async function changeVersion(e = null) {
     selected(activeVersionID, 'id-versions');
     setQuerystring('verid', activeVersion);
     setQuerystring('cn', 1);
-    setQuerystring('verid', activeVersion);
+    //setQuerystring('verid', activeVersion);
     Promise.resolve(true);
 };
 
@@ -75,6 +75,8 @@ function lastChapter() {
     activeChapterID = `id-chapter${chapter}`;
     loadChapters();
     getChapter();
+    removeQueryParam('vh');
+    document.getElementById('id-MenuBtn4').textContent = '1:';
     document.getElementById('top').scrollIntoView({ block: 'start' });
 };
 
@@ -105,6 +107,8 @@ function nextChapter() {
     chapterCount = books[i].c;
     getChapter();
     loadChapters();
+    removeQueryParam('vh');
+    document.getElementById('id-MenuBtn4').textContent = '1:';
     document.getElementById('top').scrollIntoView({ block: 'start' });
 };
 
