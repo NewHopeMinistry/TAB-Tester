@@ -22,9 +22,14 @@ var defaultVersionID = `id-version18`; // Version Defaults: KJV = 13, TWF = 18
 
 var activeFontSizeCount = 0;
 var activeFontSize = defaultFontSize;
-var activeBookID = '';
-var activeChapterID = '';
-var activeVersionID = '';
+var activeBookID = null;
+var activeChapterID = null;
+var activeVersionID = null;
+
+var pastSelectedVersionID = null;
+var pastSelectedBookID = null;
+var pastSelectedChapterID = null;
+var pastSelectedVerseID = null;
 
 var savedLocal = false;
 var searchOpen = false;
@@ -32,7 +37,7 @@ var searchIndex = null;
 var searchResults;
 var searchData;
 var searchResultIndex = 0;
-var selectedVerseID = '';
+var selectedVerseID = null;
 
 var oldBooks = [
     {

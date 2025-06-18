@@ -15,6 +15,8 @@ const urlsToCache = [
     'css/lateload.css',
     'images/icons/favicon-16.png',
     'js/variables.js',
+    'js/utilities.js',
+    'js/loadtables.js',
     'js/index.js',
     'js/lateload.js',
     'js/searcher.js',
