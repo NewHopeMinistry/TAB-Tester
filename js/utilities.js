@@ -302,21 +302,37 @@ function resetDefaults() {
     localStorage.removeItem('activeChapterID');
     localStorage.removeItem('activeVersionID');
     localStorage.removeItem('redLetter');
-    document.getElementById('id-redLetter').textContent = 'Red Letter';
-    redLetterDefault = 0;
-    localStorage.removeItem('paragraphLayout');
-    document.getElementById('id-paragraphLayout').textContent = 'Paragraph Layout';
+
     paragraphLayoutDefault = 0;
-    removeQueryParam('vh');
+    redLetterDefault = 0;
+    selectedVerseID = null;
     activeVersionID = defaultVersionID;
     activeBookID = defaultBookID;
     activeChapterID = defaultChapterID;
+    let activeVersion = Number(defaultVersionID.slice("id-version".length));
     getVersion();
+    removeQueryParam('vh');
+    setQuerystring('verid', activeVersion);
+    setQuerystring('bid', 1);
+    setQuerystring('cn', 1);
+    document.getElementById('id-MenuBtn4').textContent = '1:';
+    localStorage.removeItem('paragraphLayout');
+    document.getElementById('id-paragraphLayout').textContent = 'Paragraph Layout';
+    document.getElementById('id-redLetter').textContent = 'Red Letter';
     document.getElementById('top').scrollIntoView({ block: 'start' });
-
+    selected(pastSelectedVersionID, 'id-versions');
+    selected(pastSelectedBookID, 'id-books');
+    selected(pastSelectedChapterID, 'id-chapters');
+    document.getElementById(defaultVersionID).classList.add('cs-bvSelected');
+    document.getElementById('id-book1').classList.add('cs-bvSelected');
+    document.getElementById('id-chapter1').classList.add('cs-bvSelected');
+    pastSelectedVersionID = defaultVersionID;
+    pastSelectedBookID = defaultBookID;
+    pastSelectedChapterID = defaultChapterID;
+    pastSelectedVerseID = selectedVerseID;
 };
 
-function selected(id, container) {
+function selected(id, container, reset = null) {
 
     let unselected = null;
 
@@ -338,8 +354,8 @@ function selected(id, container) {
             pastSelectedVerseID = id;
             break;
     };
-    if (id) { document.getElementById(id).classList.add('cs-bvSelected'); };
-    if (unselected) { document.getElementById(unselected).classList.remove('cs-bvSelected'); }
+    if (id && !reset) { document.getElementById(id).classList.add('cs-bvSelected'); };
+    if (unselected) { document.getElementById(unselected).classList.remove('cs-bvSelected'); };
 };
 
 async function setFontSize() {
